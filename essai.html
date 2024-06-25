@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encadrage avec légende</title>
+    <style>
+        .encadre {
+            position: relative;
+            display: inline-block;
+        }
+        .encadre img {
+            display: block;
+        }
+        .encadre .legende {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .encadre::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 5px solid white;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="encadre">
+        <img src="votre-image.jpg" alt="Montre Nixon">
+        <div class="legende">Nixon Perimeter Collection</div>
+    </div>
+</body>
+</html>
